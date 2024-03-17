@@ -1,0 +1,31 @@
+/* TestPage.css */
+.test-page {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .test-page h2 {
+    margin-bottom: 10px;
+  }
+  
+  .test-page p {
+    margin-bottom: 20px;
+  }
+  
+  .test-page button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .test-page button:hover {
+    background-color: #0056b3;
+  }
+  

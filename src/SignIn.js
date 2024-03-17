@@ -1,45 +1,53 @@
 import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { auth } from './firebase';
-import { useNavigate, Link } from 'react-router-dom'; // Import Link
-import './all.css';
+import './SignIn.css';
 import BackButton from './BackButton';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
     try {
       await auth.signInWithEmailAndPassword(email, password);
       navigate('/test-page');
     } catch (error) {
-      console.error(error);
+      setError(error.message);
     }
   };
 
   return (
-    <div>
+    <form className="signin-form" onSubmit={handleSignIn}>
       <h2>Sign In</h2>
-      <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        required
+      />
+      <div className="password-input">
         <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          type="password"
+          type={showPassword ? "text" : "password"}
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
-        <button type="submit">Sign In</button>
-      </form>
-      <Link to="/reset-password">Reset Password</Link>
-      <BackButton/>
-    </div>
+        <span className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
+          {showPassword ? "Hide" : "Show"}
+        </span>
+      </div>
+      {error && <p className="error">{error}</p>}
+      <button type="submit">Sign In</button>
+      <Link to="/reset-password">Forgot Password?</Link>
+      <BackButton />
+    </form>
   );
 };
 

@@ -1,33 +1,30 @@
+/* HomePage.css */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
 .button-group {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .btn {
-    padding: 10px 20px;
-    margin: 0 10px;
-    text-decoration: none;
-    border-radius: 3px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn-primary {
-    background-color: #4caf50;
-    color: #fff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #45a049;
-  }
-  
-  .btn-secondary {
-    background-color: #2196f3;
-    color: #fff;
-  }
-  
-  .btn-secondary:hover {
-    background-color: #1976d2;
-  }
-  
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+}

@@ -19,12 +19,14 @@ const BackButton = () => {
 
 const styles = {
   backButton: {
-    display: 'flex',
+    display: 'inline-flex',
     alignItems: 'center',
-    backgroundColor: '#45a049',
+    backgroundColor: '#007bff',
+    color: '#fff',
     border: 'none',
     cursor: 'pointer',
     fontSize: '16px',
+    padding: '8px 16px',
     marginBottom: '16px',
   },
   icon: {

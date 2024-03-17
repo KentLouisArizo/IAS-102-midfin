@@ -5,9 +5,9 @@ import './HomePage.css';
 const HomePage = () => {
   return (
     <div className="container">
-      <h1>Welcome to Our App</h1>
+      <h1>Welcome to Don App</h1>
       <p>
-        This is a sample homepage for our user login system built with React and Firebase.
+        This is Don Login System that uses react js and firebase.
       </p>
       <div className="button-group">
         <Link to="/signup" className="btn btn-primary">
