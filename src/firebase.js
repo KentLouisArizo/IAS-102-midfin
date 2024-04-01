@@ -3,13 +3,13 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyDvddixPYa8tc6dbWup4-sqOco2pxsnrYU",
-    authDomain: "midterm-ias102.firebaseapp.com",
-    projectId: "midterm-ias102",
-    storageBucket: "midterm-ias102.appspot.com",
-    messagingSenderId: "617256644341",
-    appId: "1:617256644341:web:2de0212fadcc30665e5fbc",
-    measurementId: "G-4NTNZ8Z75K"
+    apiKey: "AIzaSyDWGMFs7i6IzPkJgILDwgLx_Dr4D3rY_YU",
+    authDomain: "my-project-ias-102.firebaseapp.com",
+    projectId: "my-project-ias-102",
+    storageBucket: "my-project-ias-102.appspot.com",
+    messagingSenderId: "1050856630340",
+    appId: "1:1050856630340:web:c3553381be8ecfae9e7411",
+    measurementId: "G-B235PBRF7Y"
   };
 
   firebase.initializeApp(firebaseConfig);
